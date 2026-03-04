@@ -16,36 +16,57 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 # Card Logic (15-min Guided Map)
 
 **Card 0: 🌟 主題封面**
-- `hook`: Under 60 chars. Why this topic matters for growth.
-- `steps`: Array of 5 strings (STEP 1 to 5).
+* `title`: **MUST start with a suitable Emoji** followed by the engaging topic title (e.g., "🤝 我們是最佳拍檔！").
+* `hook`: A summary explaining the value. **Length constraint: 50-60 characters.**
+* `steps`: An array of 5 strings. **MUST follow this exact format:**
+    * "STEP 1 🌞 暖身：[Summary]"
+    * "STEP 2 🧠 名詞：[Summary]"
+    * "STEP 3 💬 討論：[Summary]"
+    * "STEP 4 🎮 遊戲：[Summary]"
+    * "STEP 5 📝 結語：[Summary]"
+
 
 **Card 1: 🌈 對話啟動 (2 mins)**
-- `p1_text`: **[主題預告]** Announce the topic naturally (e.g., "I saw something cool today...").
-- `p2_text`: **[輕鬆提問]** A low-pressure, intuitive question to start.
-- `extra_text`: **[啟動延伸]** 2 questions to spark curiosity or "anticipation" about the theme.
+* `p1`: **topic opening**.
+    * **Title:** "👉 主題預告：".
+    * **Text:** **MUST start with a warm opening sentence** (e.g., "我們今天來聊聊...")Announce the topic naturally (e.g., "I saw something cool today..."). 
+* `p2`: **Observation**. Title: " 輕鬆提問：”. Text: A low-pressure, intuitive question to start.
+* `extra`: **Questions**. Title: "💡 還可以問：". 2 questions to spark curiosity or "anticipation" about the theme.(separated by `\n`).
+
 
 **Card 2: 🧠 觀念名詞 (2 mins)**
-- `p1_title`: "🧠 觀念：[Vocab]".
-- `p1_text`: 「『[Vocab]』就是...」 (Simple definition).
-- `p2_text`: **[具象連結]** One object or action in the room representing this.
-- `extra_text`: **[認知延伸]** 2 questions testing "Similarity" or "Opposites" (e.g., "What is NOT [Vocab]?").
+* **Logic (CRITICAL):** Auto-extract ONE Core Vocab from `Concept`.
+* `p1`: **Definition**.
+    * **Title:** MUST be "🧠 觀念：[Vocab]" (e.g., "🧠 觀念：勇氣").
+    * **Text:** MUST start with "「『[Vocab]』就是...」" (Keep definition under 20 chars).
+* `p2`: **Life Link**. Title: "🔗 生活連結：". Text: Link to 1 habit/interest briefly.
+* `extra`: **Questions**. Title: "💡 還可以問：". 2 questions testing "Similarity" or "Opposites" (e.g., "What is NOT [Vocab]?").  (separated by `\n`).
 
 **Card 3: 💬 主題探索 (7 mins) - CRITICAL**
+* **Goal:** **Deep Discussion & Strategy**. Discuss viewpoints, "How-to" strategies, or the "Why" behind the theme.
+* **Constraint:** NOT storytelling. Focus on interactive discussion about the specific topic.
 - `p1_title`: "🌟 引導觀察與回憶："
 - `p1_text`: [引導方向] Concrete scenes (School/Play). "What happened?".
 - `p2_title`: "👩‍🏫 爸媽經驗分享："
 - `p2_text`: [引導方式] Share a personal story/vulnerability.
-- `extra_text`: **[邏輯延伸]** 2 "What if" or "Why" questions to deepen the strategy or empathy.
+- * `extra`: **Questions**. Title: "💡 還可以問：". `extra_text`: 2 "What if" or "Why" questions to deepen the strategy or empathy.(separated by `\n`).
+
+
 
 **Card 4: 🎮 親子遊戲 (3 mins)**
-- `p1_text`: [遊戲玩法] Purely verbal/physical. NO PROPS.
-- `p2_text`: [互動加溫] How to make it funnier or harder.
-- `extra_text`: **[玩法延伸]** 2 ways to change the rules or roles to keep it fresh.
+* **Goal:** **Verbal Gamification (Conversation-based Play)**.
+* **Constraint (CRITICAL):** **NO PROPS ALLOWED.** Must be playable purely through talking (e.g., guessing, verbal challenges, reaction games).
+* `p1`: **Game Setup**. Title: "🤝 遊戲開始：". Text: Define the game name and simple verbal rule (e.g., "Let's play [Name]! If I say X, you say Y.").
+* `p2`: **How to Play**. Title: "🎬 怎麼玩：". Text: Simple steps to play using words only.
+* `extra`: **Swap**. Title: "🔄玩法延伸 ：". Text: 2 ways to change the rules or roles to keep it fresh.
+
 
 **Card 5: ✨ 儀式收尾 (1 min)**
-- `p1_text`: [具體鼓勵] Praise a specific observation made by the child.
-- `p2_text`: [擊掌反思] "What was the funniest/most surprising part today?".
-- `extra_text`: **[實踐延伸]** 2 tiny "Next Steps" or "Challenges" for tomorrow (e.g., "Try to spot X tomorrow!").
+* `p1`: **Praise**. Title: "👍 具體鼓勵：”. Text: Praise a specific observation made by the child.
+* `p2`: **Skinship**. Title: "👐 擊掌反思：”. Text: "What was the funniest/most surprising part today?".
+* `extra`: **Ritual**. Title: "❤️ 結語：". Text: 1 short affirmation sentence. 
+
+
 
 # Output Format (JSON Only)
 Output a single valid JSON object. Use \n for line breaks.
