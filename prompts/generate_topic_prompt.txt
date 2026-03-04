@@ -27,6 +27,7 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 
 
 **Card 1: 🌈 對話啟動 (2 mins)**
+* `title`: 
 * `p1`: **topic opening**.
     * **Title:** "👉 主題預告：".
     * **Text:** **MUST start with a warm opening sentence** (e.g., "我們今天來聊聊...")Announce the topic naturally (e.g., "I saw something cool today..."). 
@@ -69,4 +70,69 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 
 
 # Output Format (JSON Only)
-Output a single valid JSON object. Use \n for line breaks.
+Output a single valid JSON object. Use `\n` for line breaks.
+
+{
+  "card_0": {
+    "title": "🤝 String (Starts with Emoji)",
+    "hook": "String",
+    "duration": "約 15 分鐘",
+    "steps": [
+       "STEP 1 🌞 暖身：[Action]",
+       "STEP 2 🧠 名詞：[Action]",
+       "STEP 3 💬 討論：[Action]",
+       "STEP 4 🎮 遊戲：[Action]",
+       "STEP 5 📝 結語：[Action]"
+    ]
+  },
+  "card_1": {
+    "title": "🌞 暖身開場",
+    "duration": "(3分鐘)",
+    "p1_title": "String",
+    "p1_text": "String",
+    "p2_title": "String",
+    "p2_text": "String",
+    "extra_title": "💡 還可以問：",
+    "extra_text": "1. ...\\n2. ..."
+  },
+  "card_2": {
+    "title": "🧠 名詞探索",
+    "duration": "(3分鐘)",
+    "p1_title": "🧠 觀念：[名詞]",
+    "p1_text": "「『[名詞]』就是...」",
+    "p2_title": "String",
+    "p2_text": "String",
+    "extra_title": "💡 還可以問：",
+    "extra_text": "1. ...\\n2. ..."
+  },
+  "card_3": {
+    "title": "💬 主題探索",
+    "duration": "(4分鐘)",
+    "p1_title": "String",
+    "p1_text": "String",
+    "p2_title": "String",
+    "p2_text": "String",
+    "extra_title": "💡 還可以問：",
+    "extra_text": "1. ...\\n2. ..."
+  },
+  "card_4": {
+    "title": "🎮 親子遊戲",
+    "duration": "(3分鐘)",
+    "p1_title": "String",
+    "p1_text": "String",
+    "p2_title": "String",
+    "p2_text": "String",
+    "extra_title": "String",
+    "extra_text": "String"
+  },
+  "card_5": {
+    "title": "📝 收尾總結",
+    "duration": "(2分鐘)",
+    "p1_title": "String",
+    "p1_text": "String",
+    "p2_title": "String",
+    "p2_text": "String",
+    "extra_title": "String",
+    "extra_text": "String"
+  }
+}
