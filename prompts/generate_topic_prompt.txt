@@ -61,12 +61,12 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 * `title`: "🌈 對話啟動"
 * `duration`: "(2分鐘)"
 * `p1_title`: "👉 主題預告："
-* `p1_text`: [Execution Guide] Announce the theme naturally, then ask the child to find a related object in the room based on its attributes (color, shape, function, etc.). 
+* `p1_text`: Announce the theme naturally, then ask the child to find a related object in the room based on its attributes (color, shape, function, etc.). 
 * `p2_title`: "👀 輕鬆小問："
-* `p2_text`: [Execution Guide] If the child successfully finds the object, parent validates it and shares their own feeling. If the child is hesitant, parent models first.
+* `p2_text`: If the child successfully finds the object, parent validates it and shares their own feeling. If the child is hesitant, parent models first.
 * `extra_title`: "💡 還可以問："
 * `extra_text`: 2 questions to spark curiosity or "anticipation" about the theme (separated by `\n`).
-* `tips`: [Dynamic Content] Based on the dialogue above, provide a specific tip for parents on how to "catch the ball" (Serve and Return) and why linking to a physical object (Situated Cognition) helps the child engage.
+* `tips`: Based on the dialogue above, provide a specific tip for parents on how to "catch the ball" (Serve and Return) and why linking to a physical object (Situated Cognition) helps the child engage.
 
 **Card 2: 🧠 觀念名詞 (2 mins)**
 * `title`: "🧠 名詞探索"
@@ -74,21 +74,21 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 * `p1_title`: MUST be "🧠 觀念：[Vocab]" (Auto-extract Core Vocab from `Concept`).
 * `p1_text`: MUST start with 「『[Vocab]』就是...」 (Keep definition under 20 chars).
 * `p2_title`: "🔗 生活連結："
-* `p2_text`: [Execution Guide] Link the vocab to the object found in Card 1. Ensure the dialogue includes both parent and child's perspectives. Parent must provide their own observation or life-link, but can choose to let the child try first if the concept is intuitive.**
+* `p2_text`: Link the vocab to the object found in Card 1. Ensure the dialogue includes both parent and child's perspectives. Parent must provide their own observation or life-link, but can choose to let the child try first if the concept is intuitive.**
 * `extra_title`: "💡 還可以問："
 * `extra_text`: 2 questions testing "Similarity" or "Opposites" (separated by `\n`).
-* `tips`: [Dynamic Content] Based on the dialogue above, guide parents on how to use the physical object as a scaffold. Explain how the parent's shared perspective helps lower the child's cognitive load.
+* `tips`: Based on the dialogue above, guide parents on how to use the physical object as a scaffold. Explain how the parent's shared perspective helps lower the child's cognitive load.
 
 **Card 3: 💬 主題探索 (7 mins) - CRITICAL**
 * `title`: "💬 主題探索"
 * `duration`: "(7分鐘)"
 * `p1_title`: "🌟 引導觀察與回憶："
-* `p1_text`: [Execution Guide] Use the object from Card 1 as a constant "Anchor" to discuss past shared experiences related to the theme.
+* `p1_text`: Use the object from Card 1 as a constant "Anchor" to discuss past shared experiences related to the theme.
 * `p2_title`: "👩‍🏫 爸媽經驗分享："
-* `p2_text`: [Execution Guide] Reciprocal Disclosure. Ensure parents provide their own perspective/story. If the child is ready to speak, they can go first; otherwise, parent models a "mistake" or vulnerability to build safety.
+* `p2_text`: Reciprocal Disclosure. Ensure parents provide their own perspective/story. If the child is ready to speak, they can go first; otherwise, parent models a "mistake" or vulnerability to build safety.
 * `extra_title`: "💡 還可以問："
 * `extra_text`: 2 "What if" or "Why" questions to deepen the strategy or empathy (separated by `\n`).
-* `tips`: [Dynamic Content] Explain the power of the specific vulnerability/story shared above. Remind parents how this creates psychological safety for the child to share their true feelings.
+* `tips`: Explain the power of the specific vulnerability/story shared above. Remind parents how this creates psychological safety for the child to share their true feelings.
 
 **Card 4: 🎮 親子遊戲 (3 mins)**
 * `title`: "🎮 親子遊戲"
@@ -109,10 +109,11 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 * `p2_text`: "今天聊天哪一部分你覺得最有趣/驚訝？" (Reinforce the 'Review' stage).
 * `extra_title`: "❤️ 結語："
 * `extra_text`: 1 short affirmation sentence. 
-* `tips`: [Dynamic Content] Give a specific example of how to praise the child's sharing from this session. Remind parents to use physical touch (hug/high-five) to solidify the bond.
+* `tips`: Give a specific example of how to praise the child's sharing from this session. Remind parents to use physical touch (hug/high-five) to solidify the bond.
 
 # Output Format (JSON Only)
 Output a single valid JSON object. Use `\n` for line breaks.
+**IMPORTANT: The values for p1_text, p2_text, and tips must be PURE DIALOGUE or ADVICE text only. DO NOT include "Instruction:", "[引導]", or any meta-talk.**
 
 {
   "card_0": {
