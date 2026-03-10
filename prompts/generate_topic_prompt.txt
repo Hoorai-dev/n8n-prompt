@@ -24,11 +24,13 @@ The design of this conversation guide is rooted in the following pedagogical the
 
 # Interaction Strategy 
 1. **Spiral Thinking**: Every card must link to the next. Card 1's observation should fuel Card 3's discussion.
-2. **Shared Perspectives: Parents must provide their own views or vulnerability during the conversation to bridge the gap between abstract concepts and the kid's world, but they do not necessarily have to speak FIRST. Ensure a natural, balanced back-and-forth flow.*
-3. **Flexible Scaffolding: Use Parent Modeling when concepts are abstract or feelings are complex; use Child Empowerment when connecting to tangible objects already found in the room.**
-4. **Immediate Life-Link & Attributes: Link theme to a physical object based on color, shape, function, or category (e.g., Theme: Fish -> Attribute: "Something orange").**
-5. **Plan-Do-Review Cycle: Reinforce child's initiative by planning (Card 0/1), doing the activity (Card 4), and reviewing findings (Card 5).**
-6. **Scaffolded Prompting**: Use "I wonder..." or "I noticed..." instead of "Why?" to encourage natural curiosity.
+2. Natural Entry: Card 1 should feel like a "chat," not a "task." Only ask the child to find an object if it naturally fits the theme. Otherwise, start with an observation of the child's current movement or a shared feeling.
+3. Causal Reasoning (Card 3 Focus): Deepen the discussion by exploring "Why" and "What if." Help the child understand the impact of their actions on others' feelings (Perspective-taking).
+4. **Shared Perspectives: Parents must provide their own views or vulnerability during the conversation to bridge the gap between abstract concepts and the kid's world, but they do not necessarily have to speak FIRST. Ensure a natural, balanced back-and-forth flow.*
+5. **Flexible Scaffolding: Use Parent Modeling when concepts are abstract or feelings are complex; use Child Empowerment when connecting to tangible objects already found in the room.**
+6. **Immediate Life-Link & Attributes: Link theme to a physical object based on color, shape, function, or category (e.g., Theme: Fish -> Attribute: "Something orange").**
+7. **Plan-Do-Review Cycle: Reinforce child's initiative by planning (Card 0/1), doing the activity (Card 4), and reviewing findings (Card 5).**
+8. **Scaffolded Prompting**: Use "I wonder..." or "I noticed..." instead of "Why?" to encourage natural curiosity.
 
 
 # Goal
@@ -61,7 +63,7 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 * `title`: "🌈 對話啟動"
 * `duration`: "(2分鐘)"
 * `p1_title`: "👉 主題預告："
-* `p1_text`: Announce the theme naturally, then ask the child to find a related object in the room based on its attributes (color, shape, function, etc.). 
+* `p1_text`: Announce the theme naturally. Start with a warm, conversational opening. If using an object link, make it a natural invitation like 「我們來玩探險！你看那邊黑黑的地方，像不像有黑熊躲著？」 instead of a direct command to fetch things
 * `p2_title`: "👀 輕鬆小問："
 * `p2_text`: If the child successfully finds the object, parent validates it and shares their own feeling. If the child is hesitant, parent models first.
 * `extra_title`: "💡 還可以問："
@@ -83,12 +85,12 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 * `title`: "💬 主題探索"
 * `duration`: "(7分鐘)"
 * `p1_title`: "🌟 引導觀察與回憶："
-* `p1_text`: Use the object from Card 1 as a constant "Anchor" to discuss past shared experiences related to the theme.
+* `p1_text`: Scenario-based Strategy. Create a "What if" situation related to the theme. Focus on the impact on others
 * `p2_title`: "👩‍🏫 爸媽經驗分享："
 * `p2_text`: Reciprocal Disclosure. Ensure parents provide their own perspective/story. If the child is ready to speak, they can go first; otherwise, parent models a "mistake" or vulnerability to build safety.
 * `extra_title`: "💡 還可以問："
 * `extra_text`: 2 "What if" or "Why" questions to deepen the strategy or empathy (separated by `\n`).
-* `tips`: Explain the power of the specific vulnerability/story shared above. Remind parents how this creates psychological safety for the child to share their true feelings.
+* `tips`: Explain how perspective-taking helps the child understand social impact, moving beyond self-centeredness
 
 **Card 4: 🎮 親子遊戲 (3 mins)**
 * `title`: "🎮 親子遊戲"
