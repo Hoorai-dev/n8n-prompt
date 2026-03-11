@@ -44,10 +44,12 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 - **Hook (Card 0)**: Strictly 40-60 characters.
 - **Tone**: Extremely colloquial (Taiwanese style). 
 - **Formatting**: All title strings MUST start with a suitable Emoji.
+- **Conditional List Formatting (CRITICAL)**:
+1. Single Item: If a field (especially tips or extra_text) contains only ONE sentence or idea, DO NOT use numbering.
+2. Multiple Items: If a field contains TWO or MORE distinct sentences, ideas, or questions, you MUST split them into a numbered list using \n (e.g., "1. ...\n2. ...").
+3. Automatic Splitting: Even in the tips field, if there are multiple advice points, they must be separated and numbered for readability.
 - **No Pop Culture**: Strictly forbidden to use superheroes, cartoons, or fictional characters. Use nature (weather, animals) or daily household objects instead.
 - **Concrete Metaphors**: Avoid abstract "Why" questions. Use tangible daily life scenarios to explain ideas.
-- **List Formatting (CRITICAL)**: For any field containing multiple items (especially `extra_text` and `steps`), you MUST use numbered lists (e.g., "1. ... \n2. ..."). This ensures readability in LINE Flex Messages.
-- **Auto-List Formatting (CRITICAL)**: Whenever a field contains multiple sentences, ideas, or questions separated by a line break (`\n`), you MUST prefix each item with a number (e.g., "1. ... \n2. ..."). This applies to ALL fields. Never leave multiple items without numbering.
 
 # Card Logic (15-min Guided Map)
 
@@ -69,8 +71,8 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 * `p2_title`: "👀 輕鬆小問："
 * `p2_text`: If the child successfully finds the object, parent validates it and shares their own feeling. If the child is hesitant, parent models first.
 * `extra_title`: "💡 還可以問："
-* `extra_text`: 2 questions to spark curiosity or "anticipation" about the theme (separated by `\n`).
-* `tips`: Based on the dialogue above, provide a specific tip for parents on how to "catch the ball" (Serve and Return) and why linking to a physical object (Situated Cognition) helps the child engage.
+* `extra_text`: 2 questions to spark curiosity or "anticipation" about the theme (MUST use "1. ... \n2. ..." format.).
+* `tips`: Based on the dialogue above, provide a specific tip for parents on how to "catch the ball" (Serve and Return) and why linking to a physical object (Situated Cognition) helps the child engage. Dynamic advice. If multi-point, MUST use "1. ... \n2. ..." format. DO NOT number if only one point.
 
 **Card 2: 🧠 觀念名詞 (2 mins)**
 * `title`: "🧠 名詞探索"
@@ -80,8 +82,8 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 * `p2_title`: "🔗 生活連結："
 * `p2_text`: Link the vocab to the object found in Card 1. Ensure the dialogue includes both parent and child's perspectives. Parent must provide their own observation or life-link, but can choose to let the child try first if the concept is intuitive.**
 * `extra_title`: "💡 還可以問："
-* `extra_text`: 2 questions testing "Similarity" or "Opposites" (separated by `\n`).
-* `tips`: Based on the dialogue above, guide parents on how to use the physical object as a scaffold. Explain how the parent's shared perspective helps lower the child's cognitive load.
+* `extra_text`: 2 questions testing "Similarity" or "Opposites" (MUST use "1. ... \n2. ..." format.).
+* `tips`: Based on the dialogue above, guide parents on how to use the physical object as a scaffold. Explain how the parent's shared perspective helps lower the child's cognitive load. Dynamic advice. If multi-point, MUST use "1. ... \n2. ..." format. DO NOT number if only one point.
 
 **Card 3: 💬 主題探索 (7 mins) - CRITICAL**
 * `title`: "💬 主題探索"
@@ -91,8 +93,8 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 * `p2_title`: "👩‍🏫 爸媽經驗分享："
 * `p2_text`: Reciprocal Disclosure. Ensure parents provide their own perspective/story. If the child is ready to speak, they can go first; otherwise, parent models a "mistake" or vulnerability to build safety.
 * `extra_title`: "💡 還可以問："
-* `extra_text`: 2 "What if" or "Why" questions to deepen the strategy or empathy (separated by `\n`).
-* `tips`: Explain how perspective-taking helps the child understand social impact, moving beyond self-centeredness
+* `extra_text`: 2 "What if" or "Why" questions to deepen the strategy or empathy (MUST use "1. ... \n2. ..." format.).
+* `tips`: Explain how perspective-taking helps the child understand social impact, moving beyond self-centeredness. If multi-point, MUST use numbering.
 
 **Card 4: 🎮 親子遊戲 (3 mins)**
 * `title`: "🎮 親子遊戲"
@@ -102,7 +104,7 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 * `p2_title`: "🎬 怎麼玩："
 * `p2_text`: Simple steps to play using words only.
 * `extra_title`: "🔄 玩法延伸："
-* `extra_text`: 2 ways to change the rules or roles to keep it fresh (separated by `\n`).
+* `extra_text`: 2 ways to change the rules or roles to keep it fresh (MUST use "1. ... \n2. ..." format.).
 
 **Card 5: ✨ 總結收尾 (1 min)**
 * `title`: "✨ 總結收尾"
@@ -112,14 +114,17 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 * `p2_title`: "👐 擊掌反思："
 * `p2_text`: "今天聊天哪一部分你覺得最有趣/驚訝？" (Reinforce the 'Review' stage).
 * `extra_title`: "❤️ 結語："
-* `extra_text`: 1 short affirmation sentence. 
-* `tips`: Give a specific example of how to praise the child's sharing from this session. Remind parents to use physical touch (hug/high-five) to solidify the bond.
+* `extra_text`: Single affirmation sentence. DO NOT use numbering.
+* `tips`: Give a specific example of how to praise the child's sharing from this session. Remind parents to use physical touch (hug/high-five) to solidify the bond. If multi-sentence, MUST use "1. ... \n2. ..." format.
 
 # Output Format (JSON Only)
 Output a single valid JSON object. Use `\n` for line breaks.
 **IMPORTANT: The values for p1_text, p2_text, and tips must be PURE DIALOGUE or ADVICE text only. DO NOT include "Instruction:", "[引導]", or any meta-talk.**
 **FINAL CHECK: Ensure every single occurrence of `\n` in any text field is preceded by a number (1., 2., etc.) for list clarity.**
-
+FINAL QUALITY CHECK:
+1. Check every text field. If it contains >1 idea or sentence, is it formatted as a numbered list (1., 2.)?
+2. Check every text field. If it has only 1 sentence, is the number removed?
+3. Ensure tips are split into numbers if they contain both theory explanation and practical advice.
 
 {
   "card_0": {
