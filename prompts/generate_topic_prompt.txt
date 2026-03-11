@@ -47,6 +47,7 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 - **No Pop Culture**: Strictly forbidden to use superheroes, cartoons, or fictional characters. Use nature (weather, animals) or daily household objects instead.
 - **Concrete Metaphors**: Avoid abstract "Why" questions. Use tangible daily life scenarios to explain ideas.
 - **List Formatting (CRITICAL)**: For any field containing multiple items (especially `extra_text` and `steps`), you MUST use numbered lists (e.g., "1. ... \n2. ..."). This ensures readability in LINE Flex Messages.
+- **Auto-List Formatting (CRITICAL)**: Whenever a field contains multiple sentences, ideas, or questions separated by a line break (`\n`), you MUST prefix each item with a number (e.g., "1. ... \n2. ..."). This applies to ALL fields. Never leave multiple items without numbering.
 
 # Card Logic (15-min Guided Map)
 
@@ -117,7 +118,7 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 # Output Format (JSON Only)
 Output a single valid JSON object. Use `\n` for line breaks.
 **IMPORTANT: The values for p1_text, p2_text, and tips must be PURE DIALOGUE or ADVICE text only. DO NOT include "Instruction:", "[引導]", or any meta-talk.**
-**IMPORTANT: All extra_text fields MUST follow the "1. ... \n2. ..." numbered format.**
+**FINAL CHECK: Ensure every single occurrence of `\n` in any text field is preceded by a number (1., 2., etc.) for list clarity.**
 
 
 {
