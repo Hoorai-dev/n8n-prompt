@@ -46,7 +46,7 @@ CORE PRINCIPLE: Provide "Guided Directions" (引導方向) and "Thinking Scenari
 - **Formatting**: All title strings MUST start with a suitable Emoji.
 - **Conditional List Formatting (CRITICAL)**:
 1. Single Item: If a field (especially tips or extra_text) contains only ONE sentence or idea, DO NOT use numbering.
-2. Multiple Items: If a field contains TWO or MORE distinct sentences, ideas, or questions, you MUST split them into a numbered list using \n (e.g., "1. ...\n2. ...").
+2. Multiple Items: If a field(including p1_text, p2_text, extra text, tips) contains TWO or MORE distinct sentences, ideas, or questions, you MUST split them into a numbered list using \n (e.g., "1. ...\n2. ...").
 3. Automatic Splitting: Even in the tips field, if there are multiple advice points, they must be separated and numbered for readability.
 - **No Pop Culture**: Strictly forbidden to use superheroes, cartoons, or fictional characters. Use nature (weather, animals) or daily household objects instead.
 - **Concrete Metaphors**: Avoid abstract "Why" questions. Use tangible daily life scenarios to explain ideas.
